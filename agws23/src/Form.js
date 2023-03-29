@@ -6,7 +6,7 @@ function Form({ onFormSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onFormSubmit(`Give me a detailed${numhours}-hour study plan for the following topics[${topic}] and advice on how to study for it. Format the answer with <br/> tags after each hour.`);
+    onFormSubmit(`Give me a detailed${numhours}-hour study plan for the following topics[${topic}] and advice on how to study for it. Give your response as a Markdown file format.`);
   };
 
   return (
