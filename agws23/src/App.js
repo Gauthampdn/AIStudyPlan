@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "API here",
 });
 
 const openai = new OpenAIApi(configuration);
