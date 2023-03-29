@@ -5,22 +5,24 @@ import './App.css';
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "API HERE",
 });
 
 const openai = new OpenAIApi(configuration);
 
 function App() {
+  const [studyPlan, setStudyPlan] = useState(null);
   const [responseText, setResponseText] = useState("");
 
   const handleFormSubmit = async (plan) => {
+    setStudyPlan(plan);
     console.log(plan);
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: plan,
       temperature: 0.5,
-      max_tokens: 300,
+      max_tokens: 200,
       top_p: 1.0,
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
